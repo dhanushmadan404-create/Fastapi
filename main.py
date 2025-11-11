@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from list import army
-from database import session
+from database import session,engine
+import database_models
 man=FastAPI()
 p=[
     army(id=1,name="dhanush",price=500),
@@ -8,6 +9,9 @@ p=[
     army(id=3,name="hari",price=500),
     army(id=4,name="mada",price=500)
 ]
+
+database_models.base.metadata.create_all(bind=engine)
+# create the database in postgre 
 
 @man.get("/")
 def good():
