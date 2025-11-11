@@ -36,9 +36,6 @@ def update(id:int,product:army):
     return "No product found"
 
 
-# delete the product  using delete
-
-
 @man.delete("/product")
 def delete_product(id:int):
     for i in range(0,len(p)):
