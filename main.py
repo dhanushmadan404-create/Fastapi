@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from list import army
+from database_c import army
 from database import session,engine
 import database_models
 man=FastAPI()
